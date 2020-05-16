@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <title>Диплом</title>
+
+</head>
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/settings.css">
+<header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#"><img class="w-25" src="img/Linux.png" alt="logo">
+            <p>Диплом</p></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="parn.html">Парная регрессия <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mnozh.html">Множественная регрессия</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="pfe.html">Полный факторный эксперимент</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Lab5.html">Цепи Маркова</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Lab5_2.html">Моделирование методом Монте-Карло</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container mt-5">
+        <div class="row">
+
+            <div id="theory" class="col-lg-5 col-md-7 col-xs-12 card theory mx-auto">
+
+                <img class= 'full-test-theory' src="img/pfe1.PNG" alt="theory">
+                <img class= 'full-test-theory' src="img/pfe2.PNG" alt="theory">
+            </div>
+
+
+            <div id="mmain" class="col-lg-7 col-md-5 col-xs-12 text-center">
+                <b>Лабораторная работа по теме: "Полный факторный эксперимент"</b><br/>
+                <br/>
+                <b>Введите кол-во факторов: </b>
+
+                <select name="XX" id="s1">
+
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select> &nbsp;
+                <br/><input type="checkbox" name="option1" id="check" value="a1"><b>&nbsp;Обратная матрица ПФЭ</b>
+                <br/>
+
+                <b>Введите количество Y: </b> <select name="XX" id="s2">
+
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+                <button class='button3' id='podskazka_but' onclick=
+                        "podskazka_pfe()">Как считать с файла?
+                </button>
+                <div id='legendary'></div>
+                <b>Введите точность исследований, по умолчанию - 3 знака после запятой.</b><input type="text"
+                                                                                                  style="width: 38px;"
+                                                                                                  name="number"
+                                                                                                  id="znak"
+                                                                                                  size="1">
+
+
+                <br/>
+                <div class="col-lg-12 col-md-6 col-xs-8 mx-auto ">
+                <button  onclick="createMatrix('matrix1')">Создать матрицу</button> &nbsp;&nbsp; <b class="or">ИЛИ</b>
+                <input type="file" multiple id="file" name="file" class="inputfile" placeholder="Считать с файла"/>
+                <label for="file">Считать с файла</label>
+            </div>
+                <div id="podpis"></div>
+                <table id="matrix1" class="mx-auto"></table>
+                <div id="button" class="mt-2"></div>
+            </div>
+        </div>
+        </div>
+
+
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="pfe.js"></script>
+<script src="pfe_main.js"></script>
+
+</body>
+</html>
